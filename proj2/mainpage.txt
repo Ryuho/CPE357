@@ -1,0 +1,15 @@
+/** @mainpage Main Page
+ *
+ * @section Description
+ * This program The main function reports the number of lines read and 
+ * the length of the longest line that was seen. It takes none or one 
+ * parameter, and input is streamed from stdin (if no arguments), or 
+ * from a file name specified by the first argument when running the program.
+ *
+ * @section Markup
+ * Doxygen generates HTML 4.01 Transitional documents with Cascading Style
+ * Sheets (CSS), and you can include
+ * markup tags that are compatible with those
+ * standards.  This includes most of the common modern markups.
+ */ 
+

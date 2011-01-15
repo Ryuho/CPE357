@@ -1,0 +1,36 @@
+Results
+
+Lab machine: cucumber.csc.calpoly.edu
+	I found out that this lab machine supports POSIX:200112 and SUS1 by default, 
+	supports SUS2 and POSIX:199506 on demand of SUS2, supports SUS3 
+	and POSIX:20012 on demand of SUS3.
+	
+	Linux cucumber.csc.calpoly.edu 2.6.25.3-18.fc9.i686 
+	#1 SMP Tue May 13 05:38:53 EDT 2008 i686 i686 i386 GNU/Linux
+
+
+Vogon:	vogon.csc.calpoly.edu
+	I found out that this server supports POSIX:200112 and SUS1 by default, 
+	SUS2 and POSIX:200112 on demand of SUS2, SUS3 and POSIX:200112 on 
+	demand of SUS3.
+
+	Linux vogon.csc.calpoly.edu 2.6.25.3-18.fc9.i686 
+	#1 SMP Tue May 13 05:38:53 EDT 2008 i686 athlon i386 GNU/Linux
+
+
+Falcon:	falcon.csc.calpoly.edu
+	I found out that this server supports POSIX:200112 and SUS1 by default,
+	SUS2 and POSIX:199506 on demand of SUS2, SUS3 and POSIX:200112 on demand of
+	SUS3.
+
+	Linux falcon.csc.calpoly.edu 2.6.18-92.1.10.el5 
+	#1 SMP Tue Aug 5 07:42:41 EDT 2008 x86_64 x86_64 x86_64 GNU/Linux
+
+
+Sparc:	sparc.csc.calpoly.edu
+	I found out that this machine only supports POSIX:199506 and XPG3 by default,
+	only supports POSIX:199506 and SUS1 on demand of SUS2, only supports 
+	POSIX:199506 and SUS1 on demand of SUS3. This machine does not seem very able
+	to support much standards compared to the other machines.
+	
+	SunOS sparc 5.10 Generic_127127-11 sun4v sparc SUNW,Sun-Fire-T200

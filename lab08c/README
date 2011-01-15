@@ -1,0 +1,52 @@
+// Ryuho Kudo
+// CPE357 lab8b
+// Numbers of malloc and stack count
+
+//vogon
+Exiting with 48817 x 64KB malloced
+callCount  = 1047940
+
+
+//sparcc
+Exiting with 65309 x 64KB malloced
+callCount  = 74884
+
+
+--------------------------------------
+|System|# of 64KB malloced|# of stack|
+|Vogon |             48817|   1047940|
+|      | 3199270912(bytes)|          |
+--------------------------------------
+|Sparc |             65309|     74884|
+|      | 4280090624(bytes)|          |
+--------------------------------------
+
+OUTPUT FOR Linux(vogon):
+RLIMIT_DATA:		Soft=-1,	Hard=-1
+RLIMIT_STACK:		Soft=10485760,	Hard=-1
+
+
+OUTPUT FOR SunOS(sparc):
+RLIMIT_STACK:		Soft=8388608,           Hard=2147483647
+RLIMIT_DATA:		Soft=2147483647,        Hard=2147483647
+
+The program segfault mallocs as much as the program is allowed in
+blocks of 64KB. The stackfault recurses as much as it can before
+it segfaults, the number of times recursed can be found out by 
+calling fprint each time, or calling gdb.
+
+The size malloced for vogon makes sense as it is near the x32 bit
+RAM limit size (3.15GB) and the limit stated for both soft and hard
+is -1, which means as much as the hardware can support, which is
+what I got.
+
+Stack size for vogon also makes sense since it is virtually the same number.
+It agrees with the limit given in lab08a.
+
+Both stats given in Sparc does not make sense to me. Number of malloced
+size is over 4GB, which means it's hardware must be x64 underneath, but
+I didn't compile it as a x64 program, so I'm not sure what happened.
+
+The number of stack is very low comapred to the limit given by the monday's lab.
+This maybe due to other people running a lot of programs, but stack's and heaps
+are separated by process, so I'm not sure how it got affected.

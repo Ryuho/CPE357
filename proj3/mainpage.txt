@@ -1,0 +1,14 @@
+/** @mainpage Main Page
+ *
+ * @section Description
+ * This program reimplements the tail(3) command with a few restrictions.
+ * The only opiopns enabled as arguments are -f, -n <number>,<file name>
+ * for following, number of lines, and file name.
+ *
+ * @section Markup
+ * Doxygen generates HTML 4.01 Transitional documents with Cascading Style
+ * Sheets (CSS), and you can include
+ * markup tags that are compatible with those
+ * standards.  This includes most of the common modern markups.
+ */ 
+

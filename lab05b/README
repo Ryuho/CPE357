@@ -1,0 +1,42 @@
+Ryuho Kudo
+login: rkudo
+Class: CPE357
+
+Results
+
+Lab machine: cucumber.csc.calpoly.edu
+	I found out that this lab machine supports POSIX:200112 and SUS1 by default, 
+	supports SUS2 and POSIX:199506 on demand of SUS2, supports SUS3 
+	and POSIX:20012 on demand of SUS3.
+
+   isascii was supported
+   vscanf was NOT supported
+   getcwd was supported
+
+Vogon:	vogon.csc.calpoly.edu
+	I found out that this server supports POSIX:200112 and SUS1 by default, 
+	SUS2 and POSIX:200112 on demand of SUS2, SUS3 and POSIX:200112 on 
+	demand of SUS3.
+
+   isascii was supported
+   vscanf was NOT supported
+   getcwd was supported
+   
+Falcon:	falcon.csc.calpoly.edu
+	I found out that this server supports POSIX:200112 and SUS1 by default,
+	SUS2 and POSIX:199506 on demand of SUS2, SUS3 and POSIX:200112 on demand of
+	SUS3.
+
+   isascii was supported
+   vscanf was NOT supported
+   getcwd was supported
+   
+Sparc:	sparc.csc.calpoly.edu
+	I found out that this machine only supports POSIX:199506 and XPG3 by default,
+	only supports POSIX:199506 and SUS1 on demand of SUS2, only supports 
+	POSIX:199506 and SUS1 on demand of SUS3. This machine does not seem very able
+	to support much standards compared to the other machines.
+	
+   isascii was supported
+   vscanf was NOT supported
+   getcwd was supported

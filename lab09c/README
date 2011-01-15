@@ -1,0 +1,45 @@
+Ryuho Kudo
+lab09c
+
+Here are 3 runs in a row. I also submitted the .s file from gcc -S, it was really hard
+to read the assembly line.
+
+Get time, then get time again
+Average: 131 ticks
+Maximum: 24505524 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly /wo lock, then get the time again
+Average: 153 ticks
+Maximum: 50702740 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly with lock, then get the time again
+Average: 339 ticks
+Maximum: 66530356 ticks
+Minimum: 248 ticks
+
+Get time, then get time again
+Average: 134 ticks
+Maximum: 23608588 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly /wo lock, then get the time again
+Average: 93 ticks
+Maximum: 41248 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly with lock, then get the time again
+Average: 276 ticks
+Maximum: 23935580 ticks
+Minimum: 248 ticks
+
+Get time, then get time again
+Average: 115 ticks
+Maximum: 24299024 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly /wo lock, then get the time again
+Average: 116 ticks
+Maximum: 23935472 ticks
+Minimum: 88 ticks
+Get time, then add in assmembly with lock, then get the time again
+Average: 360 ticks
+Maximum: 59494012 ticks
+Minimum: 248 ticks
+

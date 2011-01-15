@@ -1,0 +1,27 @@
+/* Ryuho Kudo
+ * lab4b
+ */
+
+Please run the make4mb program to make a 4MB file before running these tests. 
+I was tempted to put it in the bashscript.sh that I wrote to run the tests, 
+but I figured this would be annoying since it creates a 4MB file automatically.
+
+After you run make4mb, run the bash script bashscript.sh to run the copy tests.
+
+
+Here is the table for runtime of 4MB of file copy with various buffer size.
+
+OS	Buffer  |real		   user		sys
+---------------------------------------------
+Linux	1    |0m29.679s	0m1.998s	0m10.241s
+Linux	512  |0m4.757s	   0m0.003s	0m0.028s
+Linux	1000 |0m1.483s	   0m0.003s	0m0.026s
+Linux	8192 |0m2.783s	   0m0.001s	0m0.013s
+---------------------------------------------
+SunOS	1    |0m50.938s   0m9.713s 0m41.210s
+SunOS	512  |0m0.159s    0m0.012s	0m0.112s
+SunOS	1000 |0m0.143s		0m0.012s	0m0.091s
+SunOS	8192 |0m0.134s		0m0.003s	0m0.047s
+
+I don't think things have changed much since 04' when the author ran the code.
+

@@ -1,0 +1,12 @@
+/** @mainpage Main Page
+ *
+ * @section Description
+ * This program is an implementation of mush.
+ *
+ * @section Markup
+ * Doxygen generates HTML 4.01 Transitional documents with Cascading Style
+ * Sheets (CSS), and you can include
+ * markup tags that are compatible with those
+ * standards.  This includes most of the common modern markups.
+ */ 
+

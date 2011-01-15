@@ -1,0 +1,23 @@
+Name: Ryuho Kudo
+Login: rkudo
+Assignment: Project 1 - myunexpand
+
+This project compiles and correctly works exactly like unexpand 
+(with a few difference) on vogon, falcon and sparc. Every function
+is documented for clarity.
+
+The list of difference between the two are:
+ - myunexpand does not have a --version option
+ - myunexpand does not have a --tabs=LIST option
+ - myunexpand does not expand a single space no matter what, 
+      unlike unexpand which converts a space into tab if
+      the character after the single space is a white space.
+      
+The last difference was due to the way I wrote my program.
+Since I wrote it to parse through characters one at a time,
+it is very hard for my program to know what kind of
+character is ahead of the current stream.
+
+If you take a look at the diff of unexpand and myunexpand 
+output of sample1.txt you will see that 10c10 is different,
+and that's an example of the limitation on my code.

@@ -1,0 +1,81 @@
+Ryuho Kudo
+CPE357 lab8a
+
+I had trouble compiling with the makefile on sparc with -m64 added
+so I just ran gcc manually with -std=c99 and -m64 switch on, that
+ran fine. 
+
+I also got warning I didn't understand with the line:
+
+mylimits.c:74: warning: overflow in implicit constant conversion 
+mylimits.c:74=	getrlimit(RLIM_INFINITY,&limit); 
+
+on falcon. But it compiled so I found out the infinity by running
+the program with the warning, then removed the RLIM_INFINITY
+call for amd64 based machines by #ifndef __amd64
+
+
+TABLES:
+
+OUTPUT FOR Linux(vogon):
+infinity = 10485760
+RLIMIT_AS:		Soft=-1,	Hard=-1
+RLIMIT_CORE:		Soft=51200000,	Hard=-1
+RLIMIT_CPU:		Soft=3600,	Hard=3600
+RLIMIT_DATA:		Soft=-1,	Hard=-1
+RLIMIT_FSIZE:		Soft=-1,	Hard=-1
+RLIMIT_LOCKS:		Soft=-1,	Hard=-1
+RLIMIT_MEMLOCK:		Soft=32768,	Hard=32768
+RLIMIT_MSGQUEUE:	Soft=819200,	Hard=819200
+RLIMIT_NICE:		Soft=0,		Hard=0
+RLIMIT_MSGQUEUE:	Soft=819200,	Hard=819200
+RLIMIT_NOFILE:		Soft=1024,	Hard=1024
+RLIMIT_NPROC:		Soft=100,	Hard=100
+RLIMIT_RSS:		Soft=921600000,	Hard=921600000
+RLIMIT_RTPRIO:		Soft=0,		Hard=0
+RLIMIT_SIGPENDING:	Soft=16384,	Hard=16384
+RLIMIT_STACK:		Soft=10485760,	Hard=-1
+RLIMIT_INFINITY:	Soft=10485760,	Hard=-1
+
+OUTPUT FOR SunOS(sparc):
+infinity = 2147483647
+RLIMIT_AS:		Soft=2147483647,        Hard=2147483647
+RLIMIT_CORE:		Soft=51200000,          Hard=2147483647
+RLIMIT_CPU:		Soft=2147483647,        Hard=2147483647
+RLIMIT_DATA:		Soft=2147483647,        Hard=2147483647
+RLIMIT_FSIZE:		Soft=2147483647,        Hard=2147483647
+RLIMIT_NOFILE:		Soft=256,               Hard=65536
+RLIMIT_STACK:		Soft=8388608,           Hard=2147483647
+RLIMIT_INFINITY:	Soft=8388608,   	      Hard=2147483647
+
+OUTPUT for Linux-x64(falcon with -m64 switch on):
+infinity = 10485760
+RLIMIT_AS:		Soft=-1,	Hard=-1
+RLIMIT_CORE:		Soft=51200000,	Hard=-1
+RLIMIT_CPU:		Soft=-1,	Hard=-1
+RLIMIT_DATA:		Soft=-1,	Hard=-1
+RLIMIT_FSIZE:		Soft=-1,	Hard=-1
+RLIMIT_LOCKS:		Soft=-1,	Hard=-1
+RLIMIT_MEMLOCK:		Soft=32768,	Hard=32768
+RLIMIT_MSGQUEUE:	Soft=819200,	Hard=819200
+RLIMIT_NICE:		Soft=0,		Hard=0
+RLIMIT_MSGQUEUE:	Soft=819200,	Hard=819200
+RLIMIT_NOFILE:		Soft=1024,	Hard=1024
+RLIMIT_NPROC:		Soft=69632,	Hard=69632
+RLIMIT_RSS:		Soft=1024000000,Hard=1024000000
+RLIMIT_RTPRIO:		Soft=0,		Hard=0
+RLIMIT_SIGPENDING:	Soft=69632,	Hard=69632
+RLIMIT_STACK:		Soft=10485760,	Hard=-1
+RLIMIT_INFINITY:	Soft=10485760,	Hard=-1
+
+OUTPUT FOR SunOS-x64(sparc with -m64 switch ons):
+infinity = 8388608
+RLIMIT_AS:      Soft=-3,	Hard=-3
+RLIMIT_CORE:    Soft=51200000,	Hard=-3
+RLIMIT_CPU:     Soft=-3,	Hard=-3
+RLIMIT_DATA:    Soft=-3,	Hard=-3
+RLIMIT_FSIZE:   Soft=-3,	Hard=-3
+RLIMIT_NOFILE:  Soft=256,	Hard=65536
+RLIMIT_STACK:   Soft=8388608,	Hard=-3
+RLIMIT_INFINITY:Soft=8388608,	Hard=-3
+
